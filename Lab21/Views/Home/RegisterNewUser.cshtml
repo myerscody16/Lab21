@@ -1,0 +1,46 @@
+﻿
+@{
+    ViewData["Title"] = "RegisterNewUser";
+}
+
+<h1>RegisterNewUser</h1>
+@if(ViewBag.ErrorMessage != null)
+{
+    <h3>@ViewBag.ErrorMessage</h3>
+}
+@model Lab21.Models.RegisterUser
+
+<form action="/Home/AddNewUser" method="post">
+    <div class="col-12">
+        First Name:
+        <input type="text" name="FirstName" value="@Model.FirstName" placeholder="@Model.FirstName" class="col-5" />
+        @Html.ValidationMessageFor(m => m.FirstName)
+    </div>
+    <div class="col-12">
+        Last Name:
+        <input type="text" name="LastName" value="@Model.LastName" placeholder="@Model.LastName" class="col-5" />
+        @Html.ValidationMessageFor(m => m.LastName)
+    </div>
+    <div class="col-12">
+        Birthday:
+        <input type="datetime" name="Birthday" value="@Model.Birthday" placeholder="@Model.Birthday" class="col-5" />
+        @Html.ValidationMessageFor(m => m.Birthday)
+    </div>
+    <div class="col-12">
+        Email:
+        <input type="text" name="Email" value="@Model.Email" placeholder="@Model.Email" class="col-5" />
+        @Html.ValidationMessageFor(m => m.Email)
+    </div>
+    <div class="col-12">
+        Password:
+        <input type="text" name="Password" value="@Model.Password" placeholder="@Model.Password" class="col-5" />
+        @Html.ValidationMessageFor(m => m.Password)
+    </div>
+    <div class="col-12">
+        Favorite Color:
+        <input type="text" name="FavoriteColor" value="@Model.FavoriteColor" placeholder="@Model.FavoriteColor" class="col-5" />
+        @Html.ValidationMessageFor(m => m.FavoriteColor)
+    </div>
+
+    <input type="submit" value="Add User" />
+</form>

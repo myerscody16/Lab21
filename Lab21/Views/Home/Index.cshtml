@@ -1,0 +1,14 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@if(ViewBag.Name != null)
+{
+    <ul class="navbar-nav flex-grow-1">
+        <li> Welcome @ViewBag.Name</li>
+    </ul>
+}
+    <form action="/Home/LoginUser">
+        <div class="text-center">
+            <input type="submit" value="Login Here" />
+        </div>
+    </form>

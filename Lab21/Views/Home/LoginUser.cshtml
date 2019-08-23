@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewData["Title"] = "LoginUser";
+}
+
+<h1>LoginUser</h1>
+
+<form action="/Home/LoginUser" method="post">
+    <div>
+        User ID:
+        <input type="number" name="UserID" value="" />
+    </div>
+    <div>
+        Password
+        <input type="text" name="Password" value="" />
+    </div>
+    <input type="submit" value="Login" />
+</form>
